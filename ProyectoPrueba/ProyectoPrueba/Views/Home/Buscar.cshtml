@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Buscar";
+}
+
+<h2>Buscar</h2>
+
+@using (Html.BeginForm("Filtrar", "Buscar", FormMethod.Post, new AjaxOptions { OnSuccess = "somemethod" }))
+{
+    <label>Id</label>
+    <input type="text" id="id" name="id"/>
+    <label>Descripción</label>
+    <input type="text" id="desc" name="descripcion" />
+    <label>ACtor</label>
+    <input type="text" id="nombreactor" name="nombreactor" />
+    <label>Id ACtor</label>
+    <input type="text" id="id" name="id" />
+
+
+
+    <input type="submit" value="Buscar" />
+
+}  
+
+<script>
+
+    function somemethod(d, q, e) {
+        console.log(d);
+        console.log(q);
+        console.log(e);
+    }
+
+</script>

@@ -1,0 +1,9 @@
+﻿@using  ProyectoPrueba.Models
+<h4>partialviu</h4>
+
+<ul>
+    @foreach (Pelicula p in Model)
+    {
+        <li>@Html.ActionLink(p.Descripcion, "Details", new { id = p.ID })</li>
+    }
+</ul>

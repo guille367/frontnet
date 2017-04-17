@@ -1,0 +1,31 @@
+﻿@using WebApplication1.Models;
+@model SolicitudBien
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+</div>
+
+<html>
+<body>
+    <button id="btnPrueba">Request</button>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script>
+
+    $("#btnPrueba").click(function () {
+        $.get('/api/PruebaAPi/Probandos', function (data) {
+            console.log(data);
+        })
+    });
+
+</script>
